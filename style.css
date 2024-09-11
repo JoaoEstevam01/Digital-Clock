@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(120deg, #00FF7F, #fad0c4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.relogio {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    width: 550px;
+    padding: 30px;
+
+    && .box {
+        height: 160px;
+        width: 140px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        background-color: linear-gradient(135deg, #6a11cb, #2575fc);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        border-radius: 7px;
+        letter-spacing: 3px;
+    }
+
+    && .box .seconds{
+        background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    }
+
+    && .span {
+        font-size: 60px;
+        font-weight: 600;
+
+    }
+    
+    && .span .time {
+        font-size: 14px;
+    }
+}
+
+.box .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.span {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.time {
+    font-size: 14px;
+}
