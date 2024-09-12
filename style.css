@@ -9,11 +9,14 @@
 
 body {
     height: 100vh;
-    background: linear-gradient(120deg, #00FF7F, #fad0c4);
+    background: linear-gradient(120deg, #ff7e5f, #feb47b);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background 1s ease-in-out;
 }
+
+/*Config relógio*/
 
 .relogio {
     display: flex;
@@ -22,6 +25,8 @@ body {
     height: 200px;
     width: 550px;
     padding: 30px;
+    background: transparent;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, .5);
 
     && .box {
         height: 160px;
@@ -71,4 +76,70 @@ body {
 
 .time {
     font-size: 14px;
+}
+
+/*Config checkbox*/
+
+body.dark-theme {
+    background: linear-gradient(120deg, #3b3b2a, #003366);;
+}
+
+.mudar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.checkbox {
+    display: none;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 20px;
+    padding: 5px;
+    width: 60px;
+    height: 30px;
+    position: relative;
+    transition: background-color 0.3s ease;
+
+    && .fa-moon {
+        left: 5px;
+        color: #2575fc;
+    }
+
+    && .fa-sun {
+        right: 5px;
+        color: #ff7e5f;
+    }
+
+    .bola {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        transition: transform 0.5s ease;
+    }
+
+}
+
+.label i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.checkbox:checked + .label {
+    background-color: #666;
+}
+
+.checkbox:checked + .label .bola {
+    transform: translateX(30px);
 }

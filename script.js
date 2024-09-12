@@ -10,3 +10,15 @@ const time = setInterval(() => {
     document.getElementById('segundos').innerHTML = segundos;
 })
 
+//Checkbox config
+
+document.addEventListener('DOMContentLoaded', () => {
+    const checkbox = document.getElementById('chk');
+    checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+            document.body.classList.add('dark-theme');
+        } else {
+            document.body.classList.remove('dark-theme');
+        }
+    });
+});
